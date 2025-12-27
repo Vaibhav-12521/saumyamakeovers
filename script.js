@@ -1,6 +1,4 @@
 
-
-// Single card content flip logic
 document.addEventListener('DOMContentLoaded', function() {
 	const front = document.querySelector('.card-content-front');
 	const back = document.querySelector('.card-content-back');
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
-// Add fadeIn animation
 const style = document.createElement('style');
 style.innerHTML = `@keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: none;} }`;
 document.head.appendChild(style);

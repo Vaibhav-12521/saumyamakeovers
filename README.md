@@ -18,7 +18,6 @@ A clean, responsive, and customizable Linktree-style profile card built with HTM
 	 - Or serve locally for best results:
 		 ```bash
 		 python -m http.server 8080
-		 # Then open http://localhost:8080
 		 ```
 
 ---

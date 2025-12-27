@@ -78,7 +78,6 @@
   </main>
   <script src="script.js"></script>
   <script>
-    // Makeup icons as emojis
     const makeupIcons = [
       '💄','💋','✨','👰','👩‍🎨','💅','🌸','🔥','😍','📸','🎥','📍','📩','📞','✈️','👑',
       '👗','👚','👠','👡','🎀','🖌️','🪞','🧴','✨','🪞','🖌️','🧴','💄','💋','💅','🧼','🫧','✨','🌸','🎀'
@@ -120,9 +119,8 @@
     window.addEventListener('resize', renderMakeupIcons);
     renderMakeupIcons();
 
-    // Re-randomize icons on theme toggle
     document.getElementById('themeToggle').addEventListener('click', function() {
-      setTimeout(renderMakeupIcons, 350); // after theme transition
+      setTimeout(renderMakeupIcons, 350);
     });
   </script>
   <script>
