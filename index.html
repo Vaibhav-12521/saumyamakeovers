@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div id="makeup-icons-bg"></div>
+    <div class="card card-flip-container" role="region" aria-label="Profile">
+      <div class="card-flip-content">
+        <div class="card-content card-content-front">
+          <div class="cover-image">
+            <img src="assets/saumya.png" alt="Saumya Singh - Makeup Artist" />
+          </div>
+          <div class="card-corner">
+            <button id="themeToggle" title="Switch theme" aria-label="Switch theme">
+              <span id="themeIcon">✻</span>
+            </button>
+          </div>
+          <header class="profile">
+            <h1 class="handle" id="handle">Saumya Singh<br>@saumyamakeovers</h1>
+            <p class="bio">
+              💄 Certified Makeup Artist<br>
+              👑 Professional Makeup Artist<br>
+              👰 Bridal | Party | Mehndi<br>
+              📍 Bahraich | Venue Makeup<br>
+              ✨ Soft glam • Bridal looks<br>
+              📩 DM / WhatsApp for bookings<br>
+              ✈️ Open to travel
+            </p>
+          </header>
+          <nav class="socials" aria-label="Social links">
+            <a class="social-link whatsapp" href="https://wa.me/916387343475?text=Mujhe%20makeup%20book%20karwana%20hai" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" width="30" height="20">
+                <path fill="currentColor" d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.54 0 .25 5.29.25 11.82c0 2.08.55 4.11 1.6 5.9L0 24l6.43-1.68a11.77 11.77 0 0 0 5.63 1.43h.01c6.52 0 11.81-5.29 11.81-11.81 0-3.15-1.23-6.11-3.36-8.36ZM12.07 21.3a9.5 9.5 0 0 1-4.85-1.32l-.35-.2-3.82 1 1.02-3.72-.23-.38a9.53 9.53 0 1 1 8.23 4.62Zm5.21-7.12c-.29-.14-1.73-.85-2-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.95 1.14-.17.2-.35.22-.64.08-.29-.14-1.24-.46-2.36-1.46-.87-.77-1.45-1.72-1.62-2-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.14-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49 0 1.46 1.07 2.87 1.22 3.07.15.2 2.11 3.22 5.12 4.52.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.73-.71 1.98-1.4.24-.69.24-1.28.17-1.4-.07-.12-.27-.2-.56-.35Z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a class="social-link youtube" href="https://www.youtube.com/@saumyamakeovers" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" width="30" height="20">
+                <path fill="currentColor" d="M23.5 6.2s-.23-1.63-.94-2.35c-.9-.94-1.9-.95-2.36-1C16.99 2.5 12 2.5 12 2.5h-.01s-4.99 0-8.19.35c-.46.05-1.46.06-2.36 1-.71.72-.94 2.35-.94 2.35S0 8.18 0 10.16v1.68c0 1.98.2 3.96.2 3.96s.23 1.63.94 2.35c.9.94 2.08.91 2.61 1.02 1.9.18 8.25.35 8.25.35s4.99 0 8.19-.35c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.35.94-2.35s.2-1.98.2-3.96v-1.68c0-1.98-.2-3.96-.2-3.96ZM9.55 14.49V7.63l6.13 3.44-6.13 3.42Z"/>
+              </svg>
+              <span>YouTube</span>
+            </a>
+          </nav>
+          <div style="display: flex; justify-content: center; margin: 18px 0 0 0;">
+            <button id="servicesBtn" class="services-btn" aria-label="Show Makeup Services">Services</button>
+          </div>
+          <footer class="footer"></footer>
+        </div>
+        <div class="card-content card-content-back" style="display:none;">
+          <div class="services-list-container">
+            <h2 class="services-title">Makeup Services</h2>
+            <ul class="services-list">
+              <li>Bridal Makeup (HD/Airbrush)</li>
+              <li>Engagement Makeup</li>
+              <li>Party Makeup</li>
+              <li>Reception Makeup</li>
+              <li>Haldi/Mehndi Makeup</li>
+              <li>Fashion/Editorial Makeup</li>
+              <li>Groom Makeup</li>
+              <li>Hair Styling</li>
+              <li>Draping</li>
+              <li>Personal Makeup Classes</li>
+              <li>Venue/Home Service</li>
+            </ul>
+            <button id="backBtn" class="services-btn" aria-label="Back to Profile">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    // Makeup icons as emojis
+    const makeupIcons = [
+      '💄','💋','✨','👰','👩‍🎨','💅','🌸','🔥','😍','📸','🎥','📍','📩','📞','✈️','👑',
+      '👗','👚','👠','👡','🎀','🖌️','🪞','🧴','✨','🪞','🖌️','🧴','💄','💋','💅','🧼','🫧','✨','🌸','🎀'
+    ];
+
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+
+    function renderMakeupIcons() {
+      const container = document.getElementById('makeup-icons-bg');
+      if (!container) return;
+      container.innerHTML = '';
+      const iconCount = makeupIcons.length;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      for (let i = 0; i < iconCount; i++) {
+        // Responsive icon size
+        let minSize = 22, maxSize = 54;
+        if (width < 600) { minSize = 18; maxSize = 32; }
+        const iconSize = randomInt(minSize, maxSize);
+        const top = randomInt(0, Math.max(0, height - iconSize));
+        const left = randomInt(0, Math.max(0, width - iconSize));
+        const iconDiv = document.createElement('div');
+        iconDiv.className = 'makeup-icon-bg';
+        iconDiv.style.position = 'absolute';
+        iconDiv.style.top = top + 'px';
+        iconDiv.style.left = left + 'px';
+        iconDiv.style.fontSize = iconSize + 'px';
+        iconDiv.style.maxWidth = iconSize + 'px';
+        iconDiv.style.maxHeight = iconSize + 'px';
+        iconDiv.style.filter = 'drop-shadow(0 2px 6px #fff0f6)';
+        iconDiv.textContent = makeupIcons[i];
+        container.appendChild(iconDiv);
+      }
+    }
+
+    window.addEventListener('resize', renderMakeupIcons);
+    renderMakeupIcons();
+
+    // Re-randomize icons on theme toggle
+    document.getElementById('themeToggle').addEventListener('click', function() {
+      setTimeout(renderMakeupIcons, 350); // after theme transition
+    });
+  </script>
+  <script>
+    const themes = [
+      {
+        name: 'aqua',
+        bg: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)',
+        blur: true
+      },
+      {
+        name: 'sunset',
+        bg: 'linear-gradient(120deg, #fffde4 0%, #f9d423 100%)',
+        blur: true
+      },
+      {
+        name: 'mint',
+        bg: 'linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)',
+        blur: true
+      },
+      {
+        name: 'sky',
+        bg: 'linear-gradient(120deg, #c2e9fb 0%, #a1c4fd 100%)',
+        blur: true
+      },
+      {
+        name: 'peach',
+        bg: 'linear-gradient(120deg, #fbc2eb 0%, #fcd1b3 100%)',
+        blur: true
+      }
+    ];
+    let themeIdx = 0;
+    const card = document.querySelector('.card');
+    const page = document.querySelector('.page');
+    const themeToggle = document.getElementById('themeToggle');
+    function applyTheme(idx) {
+      const t = themes[idx];
+      page.style.background = t.bg;
+      page.style.transition = 'background 0.7s cubic-bezier(.4,2,.6,1)';
+      if (t.blur) {
+        page.style.backdropFilter = 'blur(8px)';
+        page.style.webkitBackdropFilter = 'blur(8px)';
+      } else {
+        page.style.backdropFilter = '';
+        page.style.webkitBackdropFilter = '';
+      }
+      document.getElementById('themeIcon').textContent = ['✻','☀','❄','☁','⭕'][idx%5];
+    }
+    themeToggle.addEventListener('click', () => {
+      themeIdx = (themeIdx + 1) % themes.length;
+      applyTheme(themeIdx);
+    });
+    applyTheme(themeIdx);
+  </script>
+</body>
+</html>
+
+
+

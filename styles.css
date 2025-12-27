@@ -1,0 +1,377 @@
+/* Makeup icons background container */
+#makeup-icons-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.makeup-icon-bg {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+/* --- Card Flip Animation --- */
+.card-flip-container {
+  perspective: 1200px;
+}
+.card-flip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  width: 100%;
+  min-height: 420px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.card-front {
+  z-index: 2;
+  position: relative;
+}
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 18px 18px 18px;
+}
+
+/* --- Services Button --- */
+.services-btn {
+  background: linear-gradient(90deg, #f7cac9 60%, #ffd1dc 100%);
+  color: #6d214f;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-family: 'Inter', 'Playfair Display', serif;
+  font-weight: 600;
+  padding: 12px 32px;
+  margin-top: 0;
+  box-shadow: 0 2px 12px #ffd1dc;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.2s;
+  outline: none;
+  letter-spacing: 0.02em;
+}
+.services-btn:hover {
+  background: linear-gradient(90deg, #ffd1dc 60%, #f7cac9 100%);
+  color: #b5838d;
+  transform: scale(1.06);
+  box-shadow: 0 4px 18px #ffd1dc;
+}
+
+/* --- Services List Styling --- */
+.services-list-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+.services-title {
+  font-family: 'Playfair Display', serif;
+  color: #6d214f;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.03em;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+.services-list li {
+  background: #fff0f6;
+  color: #6d214f;
+  margin: 8px 0;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 1px 6px #ffd1dc33;
+  font-family: 'Inter', sans-serif;
+}
+/* Makeup Theme Colors */
+:root{
+  --bg: #fff0f6; /* soft pink background */
+  --card-bg: #fff8fb; /* lighter card background */
+  --text: #6d214f; /* deep plum for text */
+  --muted: #b5838d; /* muted mauve */
+  --shadow: 0 10px 30px rgba(109,33,79,0.10);
+  --ring: 0 0 0 6px rgba(255,192,203,0.18);
+  --accent: #f7cac9; /* blush pink accent */
+  --cta-bg: #f7cac9; /* call-to-action blush */
+  --gold: #ffd700; /* gold accent */
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  width:100vw;
+  overflow:hidden;
+}
+body{
+  margin:0;
+  font-family: 'Playfair Display', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.page{
+  min-height:100dvh;
+  min-height:100vh;
+  height:100vh;
+  width:100vw;
+  display:grid;
+  place-items:center;
+  padding:24px 0 40px 0;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+
+
+.card{
+  position:relative;
+  width:min(340px, 96vw);
+  max-width: 98vw;
+  background:var(--card-bg);
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  padding:0 18px 18px 18px;
+  overflow:hidden;
+  border: 2px solid var(--gold);
+  z-index: 2;
+}
+.cover-image{
+  position:relative;
+  width:100%;
+  height:26%;
+  min-height:100px;
+  overflow:hidden;
+}
+.cover-image::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:60%;
+  background:linear-gradient(to bottom, transparent, #fff0f6 90%);
+  pointer-events:none;
+}
+.cover-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.card::after{
+  content:"";
+  position:absolute; inset:0;
+  border-radius:24px; pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(15,23,42,0.06);
+}
+.card-corner{
+  position:absolute; left:14px; top:10px;
+  z-index:10;
+  user-select:none;
+}
+.card-corner button {
+  background:rgba(255,255,255,0.7);
+  border:none;
+  border-radius:50%;
+  width:32px;
+  height:32px;
+  min-width:32px;
+  min-height:32px;
+  max-width:32px;
+  max-height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  backdrop-filter: blur(2px);
+  aspect-ratio: 1/1;
+  padding: 0;
+  outline: none;
+}
+.card-corner button:hover {
+  background:rgba(255,255,255,0.95);
+  box-shadow:0 4px 16px rgba(0,0,0,0.13);
+  transform: scale(1.08) rotate(-8deg);
+}
+/* Dedicated style for the theme toggle button to ensure perfect circle and center icon */
+#themeToggle {
+  border-radius: 50% !important;
+  width: 29px !important;
+  height: 29px !important;
+  min-width: 29px !important;
+  min-height: 29px !important;
+  max-width: 29px !important;
+  max-height: 29px !important;
+  aspect-ratio: 1/1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 22px;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+#themeToggle:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  transform: scale(1.0) rotate(-8deg);
+}
+.card-corner #themeIcon {
+  pointer-events:none;
+}
+.profile{ text-align:center; padding:18px 0 0; margin-top:-25%; position:relative; z-index:5; }
+.handle{ 
+  font-size:26px; 
+  margin:4px 0 10px; 
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  font-weight: bold;
+}
+.bio{
+  margin:0 auto; 
+  line-height:1.6; 
+  color:var(--muted);
+  font-size:15px; 
+  max-width:280px;
+  font-family: 'Inter', sans-serif;
+}
+.socials{
+  display:flex; flex-direction:column; gap:10px;
+  margin:14px auto 4px; max-width:320px;
+  padding:0;
+}
+.social-link{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 18px; border-radius:16px;
+  color:#6d214f; background:#f7cac9; 
+  text-decoration:none; font-weight:500; font-size:15px;
+  box-shadow:inset 0 0 0 1px #ffd1dc;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  border: 1px solid #ffd1dc;
+}
+.social-link.whatsapp {
+  color: #1bd741;
+}
+.social-link.whatsapp svg {
+  color: #1bd741;
+  fill: #1bd741;
+}
+.social-link.youtube {
+  color: #ea3323;
+}
+.social-link.youtube svg {
+  color: #ea3323;
+  fill: #ea3323;
+}
+.social-link:hover{ 
+  transform:translateX(2px) scale(1.04); 
+  background:#ffe4ec; 
+  box-shadow:0 2px 12px #ffd1dc;
+}
+.social-link:active{ box-shadow:var(--ring); }
+
+.footer{
+  margin:14px 0 0; padding:0 0 10px; display:flex; gap:8px; justify-content:center; align-items:center;
+  color:var(--muted); font-size:13px;
+  font-family: 'Inter', sans-serif;
+}
+.foot-link{ color:var(--text); text-underline-offset:3px; }
+.foot-link:hover{ color:var(--gold); }
+
+@media (max-width: 600px) {
+  .card {
+    width: 98vw;
+    max-width: 100vw;
+    padding: 0 4vw 4vw 4vw;
+    border-radius: 16px;
+  }
+  .cover-image {
+    min-height: 120px;
+    border-radius: 16px 16px 0 0;
+  }
+  .profile {
+    padding-top: 10px;
+  }
+  .services-list-container {
+    max-width: 95vw;
+    padding: 0 2vw;
+  }
+  .services-list li {
+    font-size: 0.98rem;
+    padding: 8px 0;
+  }
+  .services-btn {
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 14px;
+  }
+  .footer {
+    font-size: 11px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 0 2vw 2vw 2vw;
+    border-radius: 10px;
+  }
+  .cover-image {
+    min-height: 80px;
+    border-radius: 10px 10px 0 0;
+  }
+  .handle {
+    font-size: 18px;
+  }
+  .bio {
+    font-size: 12px;
+  }
+  .services-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #makeup-icons-bg {
+    width: 100vw;
+    height: 100vh;
+  }
+  .makeup-icon-bg {
+    font-size: 22px !important;
+    max-width: 32px;
+    max-height: 32px;
+  }
+}
